@@ -51,7 +51,6 @@ h1,h2,h3,p{
 .header__container{
     display: flex;
     align-items: center;
-    padding: 25px 15px;
 }
 
 .nav{
@@ -87,6 +86,7 @@ h1,h2,h3,p{
 .nav__link{
     color: var(--main--black);
     position: relative;
+    padding: 32px 0;
     
 }
 .current{
@@ -101,7 +101,7 @@ h1,h2,h3,p{
     display: block;
     content: '';
     width: 100%;
-    bottom: -34px;
+    bottom: -1px;
     border-bottom: 4px solid var(--link--color);
     border-radius:2px;
     transform: scaleX(0);
@@ -136,6 +136,7 @@ h1,h2,h3,p{
     color: var(--text--color);
     display: flex;
     align-items: center;
+    padding: 32px 0;
 }
 
 .contact__link:hover,
@@ -163,11 +164,12 @@ h1,h2,h3,p{
     background-repeat: no-repeat;
     max-width: 1600px;
     margin: 0 auto;
+    padding: 200px 0;
 }
 
 .hero__content{
-padding: 200px 452px;
-text-align: center;
+    text-align: center;
+    max-width: 696px;
 
 
 }
@@ -284,7 +286,6 @@ text-align: center;
 /* --------------------------------------TEAM------------------------------- */
 .team{
     background: var(--bg--color);
-    max-width: 1600px;
     margin: 0 auto;
 }
 
@@ -311,7 +312,7 @@ text-align: center;
 }
 
 .team__item__content{
-    padding: 30px 59px;
+    padding: 30px 32px;
     text-align: center;
 }
 
@@ -412,12 +413,11 @@ text-align: center;
 /* ----------------------------------------FOOTER-------------------- */
 .footer {
     background: var(--background--section);
-    max-width: 1600px;
     margin: 0 auto;
+    padding: 60px 0;
 }
 
 .footer__container{
-    padding: 60px 15px;
     display: flex;
     align-items: baseline;
 }
@@ -446,6 +446,10 @@ text-align: center;
 
 .address__contact {
     color: rgba(255, 255, 255, 0.6);
+}
+.address__link:hover,
+.address__link:focus {
+    color: #2196F3;
 }
 
 .footer__second{

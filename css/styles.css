@@ -541,8 +541,8 @@ h1,h2,h3,p{
     transition: box-shadow 250ms var(--cubic--bezier);
 }
 
-.portfolio_item>a:hover,
-.portfolio_item>a:focus{
+.portfolio__item--active:hover,
+.portfolio__item--active:focus{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     transition: box-shadow 250ms var(--cubic--bezier);
 }
@@ -568,7 +568,8 @@ h1,h2,h3,p{
     transition: transform 250ms var(--cubic--bezier);
 }
 
-.portfolio__top__content:hover .portfolio__item__description{
+.portfolio__top__content:hover .portfolio__item__description,
+.portfolio__item--active:focus .portfolio__item__description{
     transform: translateY(0);
     transition: transform 250ms var(--cubic--bezier);
 }

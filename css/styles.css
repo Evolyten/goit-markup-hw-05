@@ -214,10 +214,12 @@ h1,h2,h3,p{
     margin-right: 0;
 }
 .advantage__svg{
-    text-align: center;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
     margin-bottom: 30px;
     background: var(--bg--color);
-    padding: 25px 0;
+    height: 120px;
 }
 .advantage__item__head{
     font-size: 14px;
@@ -307,10 +309,10 @@ h1,h2,h3,p{
     margin-right: 0;
 }
 
-
-
-.team__list__item:last-child{
-    margin-right: 0;
+.team__item__img{
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .team__item__content{
@@ -375,6 +377,7 @@ h1,h2,h3,p{
 .client__item{
     width: calc((100% - 150px)/6);
     margin-right: 30px;
+    height: 92px;
 }
 
 .client__item:last-child{
@@ -382,13 +385,11 @@ h1,h2,h3,p{
 }
 
 .client__link{
-    padding-top: 16px;
-    padding-bottom: 16px;
-    width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
     fill: var(--social--color);
     border: 1px solid var(--social--color);
     border-radius: 4px;
@@ -461,6 +462,7 @@ h1,h2,h3,p{
 }
 .footer__second__head{
     font-size: 14px;
+    font-weight: 700;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
@@ -525,18 +527,22 @@ h1,h2,h3,p{
     margin-bottom: -30px;
 }
 .portfolio_item{
+    display: flex;
     position: relative;
     margin:0 30px 30px 0 ;
     width: calc((100% - 60px)/3);
-    cursor: pointer;
-    transition: box-shadow 250ms var(--cubic--bezier);
+    
 }
 .portfolio_item:nth-child(3n){
     margin-right: 0;
 }
+.portfolio_item--active{
+    width: 100%;
+    transition: box-shadow 250ms var(--cubic--bezier);
+}
 
-.portfolio_item:hover,
-.portfolio_item:focus{
+.portfolio_item>a:hover,
+.portfolio_item>a:focus{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     transition: box-shadow 250ms var(--cubic--bezier);
 }
@@ -546,6 +552,8 @@ h1,h2,h3,p{
 }
 .portfolio__item__img{
     display: block;
+    width: 100%;
+    height: auto;
 }
 
 .portfolio__item__description {
@@ -556,7 +564,7 @@ h1,h2,h3,p{
     height: 100%;
     padding: 63px 24px;
     background: rgba(33, 150, 243, 0.9);
-    transform: translateY(101%);
+    transform: translateY(100%);
     transition: transform 250ms var(--cubic--bezier);
 }
 
@@ -570,9 +578,11 @@ h1,h2,h3,p{
     padding: 20px 24px;
     background: var(--white--color);
     border: 1px solid #EEEEEE;
+    border-top: 0;
 }
 
 .portfolio__item__name{
+    color: var(--main--black);
     font-weight: 700;
     font-size: 18px;
     line-height: 2;

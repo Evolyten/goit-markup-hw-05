@@ -270,12 +270,15 @@ h1,h2,h3,p{
 }
 .servise__item__content{
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     bottom: 0;
     left: 0;
     background: rgba(47, 48, 58, 0.8);
-    padding: 27px 0;
+    height: 70px;
     width: 100%;
-    text-align: center;
+    
 }
 .servise__item__head{
     font-size: 16px;
@@ -426,7 +429,7 @@ h1,h2,h3,p{
 }
 
 .address{
-    padding-top: 20px;
+    margin-top: 20px;
 }
 
 .address__list__item:not(:last-child){
@@ -499,11 +502,11 @@ h1,h2,h3,p{
     text-align: center;
     letter-spacing: 0.03em;
     color:var(--main--black);
-    background: var(--bg--color);
+    background-color: var(--bg--color);
     border-radius: 4px;
     border: none;
     cursor: pointer;
-    transition: background 250ms var(--cubic--bezier), color 250ms var(--cubic--bezier), box-shadow 250ms var(--cubic--bezier);
+    transition: background-color 250ms var(--cubic--bezier), color 250ms var(--cubic--bezier), box-shadow 250ms var(--cubic--bezier);
 }
 .current__btn{
     background: var(--link--color);
@@ -515,10 +518,10 @@ h1,h2,h3,p{
 
 .projects__btn:hover,
 .projects__btn:focus{
-    background: var(--link--color);
+    background-color: var(--link--color);
     color: var(--white--color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12); 
-    transition: background 250ms var(--cubic--bezier), color 250ms var(--cubic--bezier), box-shadow 250ms var(--cubic--bezier) ;
+    transition: background-color 250ms var(--cubic--bezier), color 250ms var(--cubic--bezier), box-shadow 250ms var(--cubic--bezier) ;
 }
 
 .projects__portfolio{
@@ -536,7 +539,7 @@ h1,h2,h3,p{
 .portfolio_item:nth-child(3n){
     margin-right: 0;
 }
-.portfolio_item--active{
+.portfolio__item--active{
     width: 100%;
     transition: box-shadow 250ms var(--cubic--bezier);
 }
@@ -614,18 +617,17 @@ h1,h2,h3,p{
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
     opacity: 1;
-    transition: opacity 250ms var(--cubic--bezier);
-    
+    transition: opacity 1000ms var(--cubic--bezier);
 }
 .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-    
 }
 
 .backdrop.is-hidden .modal{
     transform: translate(-50%, -50%) scale(0.2);
+    transition: transform 1000ms var(--cubic--bezier), opacity 250ms var(--cubic--bezier);
 }
 .modal{
     position: absolute;
